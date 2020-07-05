@@ -31,4 +31,42 @@ public class Plano implements Serializable{
 	
 	@Column(name = "obs")
 	private String obs;
+	
+	public Plano() {
+	}
+
+	
+	public String getNome() {
+		return nome;
+	}
+
+	
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	
+	public Long getId() {
+		return id;
+	}
+	
+	public BigDecimal getFranquia() {
+		return franquia;
+	}
+
+	
+	public void setFranquia(BigDecimal franquia) {
+		this.franquia = franquia;
+	}
+
+	
+	public String getObs() {
+		return obs;
+	}
+
+	
+	public void setObs(String obs) {
+		this.obs = obs;
+	}
+	
 }
