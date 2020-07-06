@@ -27,7 +27,7 @@ public class Custo implements Serializable{
 	private String origDDD;
 	
 	@Column(name = "destDDD", nullable = false)
-	private String oestDDD;
+	private String destDDD;
 	
 	@Column(name = "preco", nullable = false)
 	private BigDecimal preco;
@@ -35,4 +35,40 @@ public class Custo implements Serializable{
 	public Custo() {
 	}
 	
+	public Long getId() {
+		return id;
+	}
+	
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
+	public String getOrigDDD() {
+		return origDDD;
+	}
+
+	
+	public void setOrigDDD(String origDDD) {
+		this.origDDD = origDDD;
+	}
+
+	
+	public String getDestDDD() {
+		return destDDD;
+	}
+
+	
+	public void setDestDDD(String destDDD) {
+		this.destDDD = destDDD;
+	}
+
+	
+	public BigDecimal getPreco() {
+		return preco;
+	}
+
+	
+	public void setPreco(BigDecimal preco) {
+		this.preco = preco;
+	}
 }

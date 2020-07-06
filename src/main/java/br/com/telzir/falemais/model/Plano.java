@@ -34,7 +34,6 @@ public class Plano implements Serializable{
 	
 	public Plano() {
 	}
-
 	
 	public String getNome() {
 		return nome;
@@ -48,6 +47,10 @@ public class Plano implements Serializable{
 	
 	public Long getId() {
 		return id;
+	}
+	
+	public void setId(Long id) {
+		this.id = id;
 	}
 	
 	public BigDecimal getFranquia() {
