@@ -26,13 +26,13 @@ A aplicação foi desenvolvida utilizando os componentes abaixo:
 - HTML
 - CSS
 
-## Instalação do Projeto
+## Instalação do projeto
 
 - Faça o download dos arquivos do projeto
 ```shell
 git clone https://github.com/arthurlima96/fale-mais-rep.git
 ```
-## Execução dos teste
+## Execução dos testes
 
 Abrindo o terminal e digitando o comando abaixo é possivel executar os testes da aplicação
 
@@ -42,7 +42,7 @@ mvn test
 
 ## Executação da aplicação localmente
 
-Existe algumas formas de exeuutar uma aplicação Spring Boot localmente. Um dos caminhos é executar o método `main` da classe `br.com.telzir.falemais.FaleMaisApplication` na sua IDE.
+Existe algumas formas de executar uma aplicação Spring Boot localmente. Um dos caminhos é executar o método `main` da classe `br.com.telzir.falemais.FaleMaisApplication` na sua IDE.
 
 Uma outra alternativa para isso é usar o [Spring Boot Maven plugin](https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html) da seguinte forma:
 
@@ -53,3 +53,7 @@ mvn spring-boot:run
 ```
 
 Feito isso, basta abrir o navegador e digitar o endereço <a href="http://localhost:8080" target="_blank">`http://localhost:8080`</a>
+
+Caso não consiga executar localmente a aplicação, acesse <a href="https://telzir-arthur-lima.herokuapp.com/" target="_blank">`https://telzir-arthur-lima.herokuapp.com/`</a>, a aplicação ficará em execução para ser avaliada
+
+---
