@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import br.com.telzir.falemais.model.Plano;
-import br.com.telzir.falemais.model.PlanoComCusto;
+import br.com.telzir.falemais.model.PlanoComCustoResponse;
 
 
 public interface PlanoRepository extends JpaRepository<Plano, Long>{
@@ -15,7 +15,7 @@ public interface PlanoRepository extends JpaRepository<Plano, Long>{
 	public Plano findByNome (String nome);
 	
 	@Query(value = 
-	          "SELECT new br.com.telzir.falemais.model.PlanoComCusto( "
+	          "SELECT new br.com.telzir.falemais.model.PlanoComCustoResponse( "
 	        + "c.origDDD, "
 			+ "c.destDDD, "
 			+ "CAST(:tempoLigacao AS big_decimal), "
@@ -25,5 +25,5 @@ public interface PlanoRepository extends JpaRepository<Plano, Long>{
 			+ "FROM Custo c, Plano p where "
 			+ "c.origDDD = :origemDDD AND "
 			+ "c.destDDD = :destinoDDD AND p.id = :planoId")
-	public PlanoComCusto calculoValorLigacao(@Param("origemDDD")String origem,@Param("destinoDDD") String destino,@Param("planoId") Long planoId,@Param("tempoLigacao") BigDecimal tempoLigacao);
+	public PlanoComCustoResponse calculoValorLigacao(@Param("origemDDD")String origem,@Param("destinoDDD") String destino,@Param("planoId") Long planoId,@Param("tempoLigacao") BigDecimal tempoLigacao);
 }

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.telzir.falemais.model.Plano;
-import br.com.telzir.falemais.model.PlanoComCusto;
+import br.com.telzir.falemais.model.PlanoComCustoResponse;
 import br.com.telzir.falemais.model.PlanoComCustoRequest;
 import br.com.telzir.falemais.repository.PlanoRepository;
 
@@ -27,7 +27,7 @@ public class PlanoController {
 	}
 	
 	@PostMapping("/simulacao")
-	public PlanoComCusto calculoValorLigacao(@RequestBody PlanoComCustoRequest planoComCustoRQ) {
+	public PlanoComCustoResponse calculoValorLigacao(@RequestBody PlanoComCustoRequest planoComCustoRQ) {
 		return planoRepository
 			.calculoValorLigacao(
 				planoComCustoRQ.getOrigem(), planoComCustoRQ.getDestino(), planoComCustoRQ.getPlanoId(),

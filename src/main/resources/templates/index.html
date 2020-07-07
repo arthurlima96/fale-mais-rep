@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Simulação</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="../css/shards.min.css"> -->
+</head>
+
+<body>
+    <div class="container my-5">
+        <h3> Calcular Valor Ligação</h3>
+        <div class="card">
+            <div class="card-body">
+                <div class="col-md-10">
+                    <form action="#" th:action="@{/simulacao}" th:object="${planoComCustoRQ}" method="post">
+                        <div class="row">
+                            <div class="form-group col-md-8">
+                                <label for="name" class="col-form-label">DDD de Origem</label> <input type="text" th:field="*{origem}" class="form-control" id="origem" placeholder="Origem"> <span th:if="${#fields.hasErrors('origem')}" th:errors="*{origem}" class="text-danger"></span>
+                            </div>
+                            
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">DDD de Destino</label> <input type="text" th:field="*{destino}" class="form-control" id="destino" placeholder="Destino"> <span th:if="${#fields.hasErrors('destino')}" th:errors="*{destino}" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group col-md-8">
+                                <label for="phoneNo" class="col-form-label">Tempo da Ligação</label> <input type="text" th:field="*{tempo}" class="form-control" id="tempo" placeholder="Tempo"> <span th:if="${#fields.hasErrors('tempo')}" th:errors="*{tempo}" class="text-danger"></span>
+                            </div>
+							<div class="form-group col-md-8">
+								<select class="form-control" th:field="*{planoId}">
+				                    <option value=""> Selecione um Plano </option>
+				                    <option th:each="plano : ${planos}" th:value="${plano.id}" th:utext="${plano.nome}"/>
+				                 </select>
+			                 </div>
+                            <div class="col-md-6">
+                                <input type="submit" class="btn btn-primary" value="Simular">
+                            </div>
+
+                            <div class="form-group col-md-8"></div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
