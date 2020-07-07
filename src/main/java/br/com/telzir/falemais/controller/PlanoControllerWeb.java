@@ -34,6 +34,8 @@ public class PlanoControllerWeb {
 	public String calculoValorLigacao(@Valid @ModelAttribute("planoComCustoRQ")PlanoComCustoRequest planoComCustoRQ, BindingResult result,
 		Model model) {
 		 if (result.hasErrors()) {
+			    Collection<Plano> planos = planoRepository.findAll();
+				model.addAttribute("planos", planos);
 	            return "index";
 	        }
 		PlanoComCustoResponse planoComCusto = planoRepository
