@@ -1,9 +1,15 @@
 package br.com.telzir.falemais.model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class PlanoComCustoRequest {
+public class PlanoComCustoRequest implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4602970688925940627L;
+
 	private String origem;
 	
 	private String destino;

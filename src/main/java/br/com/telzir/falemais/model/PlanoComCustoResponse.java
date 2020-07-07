@@ -1,9 +1,14 @@
 package br.com.telzir.falemais.model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class PlanoComCusto {
+public class PlanoComCustoResponse implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2409641606184977975L;
 	private String origem;
 	private String destino;
 	private BigDecimal tempo;
@@ -11,10 +16,10 @@ public class PlanoComCusto {
 	private BigDecimal valorComPlano;
 	private BigDecimal valorSemPlano;
 	
-	public PlanoComCusto() {
+	public PlanoComCustoResponse() {
 	}
 	
-	public PlanoComCusto(String origem, String destino, BigDecimal tempo, String plano, BigDecimal valorComPlano,
+	public PlanoComCustoResponse(String origem, String destino, BigDecimal tempo, String plano, BigDecimal valorComPlano,
 		BigDecimal valorSemPlano) {
 		this.origem = origem;
 		this.destino = destino;
