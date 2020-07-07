@@ -16,7 +16,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import br.com.telzir.falemais.model.Custo;
 import br.com.telzir.falemais.model.Plano;
-import br.com.telzir.falemais.model.PlanoComCusto;
+import br.com.telzir.falemais.model.PlanoComCustoResponse;
 
 @ExtendWith(SpringExtension.class)
 @DataJpaTest
@@ -81,7 +81,7 @@ public class PlanoRepositoryTest {
 		
 		BigDecimal tempoLigacao =  new BigDecimal("20.00");
 		
-		PlanoComCusto planoComCusto = planoRepository
+		PlanoComCustoResponse planoComCusto = planoRepository
 			.calculoValorLigacao("011", "016", buscaFalemais.getId(),tempoLigacao);
 		
 		BigDecimal valorComPlano = new BigDecimal("0.00");
@@ -111,7 +111,7 @@ public class PlanoRepositoryTest {
 		
 		BigDecimal tempoLigacao =  new BigDecimal("80.00");
 		
-		PlanoComCusto planoComCusto = planoRepository
+		PlanoComCustoResponse planoComCusto = planoRepository
 			.calculoValorLigacao("011", "017", buscaFalemais.getId(),tempoLigacao);
 		
 		BigDecimal valorComPlano = new BigDecimal("37.40");
@@ -141,7 +141,7 @@ public class PlanoRepositoryTest {
 		
 		BigDecimal tempoLigacao =  new BigDecimal("200.00");
 		
-		PlanoComCusto planoComCusto = planoRepository
+		PlanoComCustoResponse planoComCusto = planoRepository
 			.calculoValorLigacao("018", "011", buscaFalemais.getId(),tempoLigacao);
 		
 		BigDecimal valorComPlano = new BigDecimal("167.20");
@@ -170,7 +170,7 @@ public class PlanoRepositoryTest {
 		
 		BigDecimal tempoLigacao =  new BigDecimal("100.00");
 		
-		PlanoComCusto planoComCusto = planoRepository
+		PlanoComCustoResponse planoComCusto = planoRepository
 			.calculoValorLigacao("018", "017", buscaFalemais.getId(),tempoLigacao);
 		
 		assertNull(planoComCusto);
