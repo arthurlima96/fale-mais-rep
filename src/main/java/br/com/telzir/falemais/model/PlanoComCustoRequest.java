@@ -3,19 +3,26 @@ package br.com.telzir.falemais.model;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class PlanoComCustoRequest implements Serializable {
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
+public class PlanoComCustoRequest {
 	
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -4602970688925940627L;
+//	private static final long serialVersionUID = -4602970688925940627L;
 
+	@NotBlank(message = "Informe um DDD de Origem")
 	private String origem;
 	
+	@NotBlank(message = "Informe um DDD de Destino")
 	private String destino;
 	
+	@NotNull(message = "Informe o tempo da ligação")
 	private BigDecimal tempo;
 	
+	@NotNull(message = "Selecione um plano")
 	private Long planoId;
 	
 	public PlanoComCustoRequest() {

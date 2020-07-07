@@ -20,7 +20,9 @@
                     <form action="#" th:action="@{/simulacao}" th:object="${planoComCustoRQ}" method="post">
                         <div class="row">
                             <div class="form-group col-md-8">
-                                <label for="name" class="col-form-label">DDD de Origem</label> <input type="text" th:field="*{origem}" class="form-control" id="origem" placeholder="Origem"> <span th:if="${#fields.hasErrors('origem')}" th:errors="*{origem}" class="text-danger"></span>
+                                <label for="name" class="col-form-label">DDD de Origem</label>
+                                <input type="text" th:field="*{origem}" class="form-control" id="origem" placeholder="Origem">
+                                <span th:if="${#fields.hasErrors('origem')}" th:errors="*{origem}" class="text-danger"></span>
                             </div>
                             
                             <div class="form-group col-md-8">
@@ -28,13 +30,14 @@
                             </div>
 
                             <div class="form-group col-md-8">
-                                <label for="phoneNo" class="col-form-label">Tempo da Ligação</label> <input type="text" th:field="*{tempo}" class="form-control" id="tempo" placeholder="Tempo"> <span th:if="${#fields.hasErrors('tempo')}" th:errors="*{tempo}" class="text-danger"></span>
+                                <label for="phoneNo" class="col-form-label">Tempo da Ligação</label> <input type="number" step=".01" th:field="*{tempo}" class="form-control" id="tempo" placeholder="Tempo"> <span th:if="${#fields.hasErrors('tempo')}" th:errors="*{tempo}" class="text-danger"></span>
                             </div>
 							<div class="form-group col-md-8">
 								<select class="form-control" th:field="*{planoId}">
 				                    <option value=""> Selecione um Plano </option>
 				                    <option th:each="plano : ${planos}" th:value="${plano.id}" th:utext="${plano.nome}"/>
 				                 </select>
+				                  <span th:if="${#fields.hasErrors('planoId')}" th:errors="*{planoId}" class="text-danger"></span>
 			                 </div>
                             <div class="col-md-6">
                                 <input type="submit" class="btn btn-primary" value="Simular">
