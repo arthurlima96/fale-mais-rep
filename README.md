@@ -51,9 +51,16 @@ Abrindo o terminal e digitando
 ```shell
 mvn spring-boot:run
 ```
+Com a aplicação em execução é possivél acessar de duas formas, por meio das páginas web ou por meio da API
 
-Feito isso, basta abrir o navegador e digitar o endereço <a href="http://localhost:8080" target="_blank">`http://localhost:8080`</a>
+## Acesso por meio das páginas web
 
-Caso não consiga executar localmente a aplicação, acesse <a href="https://telzir-arthur-lima.herokuapp.com/" target="_blank">`https://telzir-arthur-lima.herokuapp.com/`</a>, a aplicação ficará em execução para ser avaliada
+Basta abrir o navegador e digitar o endereço <a href="http://localhost:8080" target="_blank">`http://localhost:8080`</a>
 
----
+## Acesso por meio da API
+
+Basta abrir o navegador e digitar o endereço <a href="http://localhost:8080/docs.html" target="_blank">`http://localhost:8080/docs.html`</a>
+
+Abrirá uma pagina com as endpoints disponivéis
+
+Caso não consiga executar localmente para obter acesso a aplicação, clique no link <a href="https://telzir-arthur-lima.herokuapp.com/" target="_blank">`https://telzir-arthur-lima.herokuapp.com/`</a>. A aplicação ficará em execução para ser avaliada
